@@ -1,0 +1,51 @@
+.NavBar {
+    padding:0;
+    height: 20vh;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: 
+    linear-gradient(to bottom,rgba(44, 30, 165, 0.73), #000),
+    url(background.jpg) no-repeat center center; 
+    background-size: cover;
+
+}
+
+.NavBar .lista {
+    padding:0;
+    margin:0;
+    height:50%;
+    list-style: none;
+    display:flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.NavBar .lista li {
+    display: flex;
+    width:15vw;
+    height:100%;
+}
+
+.NavBar .lista li a{
+    color:white;
+    font-size: 1.8rem;
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration:none;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.NavBar .lista li a:hover {
+    background-color: #00000030;
+    color:white;
+    font-size: 2rem;
+    font-weight: bolder;
+}

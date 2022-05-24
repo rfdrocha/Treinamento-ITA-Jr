@@ -1,0 +1,22 @@
+.Conteudo{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+.Home {
+    width:100vw;
+    height:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+
+    color:white;
+}
+
+.Home .titulo {
+    margin-bottom:10%;
+}

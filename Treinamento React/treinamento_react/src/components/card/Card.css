@@ -1,0 +1,75 @@
+#card{
+    border-radius: 5%;
+    -webkit-box-shadow: 2px 4px 10px 4px rgba(0,0,0,0.79); 
+    box-shadow: 2px 4px 10px 4px rgba(0,0,0,0.79);
+    padding:1px;
+    background-color: rgba(100, 100, 100, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width:30vw;
+    height: 30vh;
+
+
+
+    
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.campo{
+    width:100%;
+    max-width: 450px;
+    margin-top:5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+#botaoLogin{
+    width: 90%;
+    border-radius: 10px;
+    align-self: center;
+    max-width: 450px;
+    
+    height:100%;
+    background-color: black;
+    color: white;
+
+    font-size: 1rem;
+    font: bolder;
+    cursor:pointer;
+    transition: 0.4s all ease;
+}
+
+#botaoLogin:hover{
+    background-color: darkgrey;
+    color:black;
+    border-color: darkgrey;
+}
+
+.input{
+    width:90%;
+    margin-left:5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding:5px 5px 5px 15px;
+    height: 30%;
+
+    border: 1%;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    font-size: 120%;
+}

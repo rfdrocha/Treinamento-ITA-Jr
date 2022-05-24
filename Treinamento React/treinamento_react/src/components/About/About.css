@@ -1,0 +1,19 @@
+.SobreNos {
+    color:white;
+    background-color:#000;
+    width: 100%;
+    height: 10vh;
+    padding-top:10px;
+}
+
+.SobreNos h2 {
+    text-align: center;
+    margin:0 0 0 30px;
+    font-size: 3.0rem;
+}
+
+.conteudo {
+    color:white;
+    height: 50vh;
+    width:100%;
+}
