@@ -1,0 +1,43 @@
+@media (max-width:500px){
+    body{
+        background-image: url(background_mobile.jpg);
+        background-repeat: no-repeat; 
+        background-size: cover;
+    }
+
+    #card{
+        top:40%;
+        left:30%;
+        height: 30%;
+    }
+
+    .cabecalho{
+        background-color: rgba(100, 100, 100, 0.95);
+        border-bottom: rgba(18, 19, 15, 0.95) solid 1px;
+    }
+
+    .esquerdaNavBar{
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+    }
+
+    .navbar .sobre_navbar{
+        width:35vw;
+    }
+
+    .navbar .sobre_navbar #textoSobre{
+        font-size: 1.5em;
+        font-weight: bold;
+        color: white;
+    }
+
+    .navbar .login_navbar{
+        display: none;
+    }
+
+
+    .input{
+        font-size: 0.7rem;
+    }
+}
