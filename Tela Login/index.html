@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <link rel="stylesheet" href="style.css">
         <meta charset="UTF-8">
@@ -18,25 +18,55 @@
                 <div class="login_navbar"><p id="textoLogin">Login</p></div>
             </div>
         </div>
-        <div id="card">
-            <h2>ITA Júnior</h2>
-            <form action="" class="formulario">
-                <div class="campo">
-                    <label for="email"></label>
-                    <input type="email" name="email" id="email" placeholder="Email" class="input">
-                </div>
-                <div class="campo">
-                    <label for="password"></label>
+        <div class="card">
+            <h2>Faça seu login</h2>
+            <div class="campo">
+                <label for="email"></label>
+                <input type="email" name="email" id="email" placeholder="Email" class="input">
+            </div>
+            <div class="campo">
+                <label for="password"></label>
 
-                    <input type="password" id="password" name="password" placeholder="Senha" class="input">
-                    
-                </div>
-                <div class="campo">
-                    <button id="botaoLogin" type="submit">Login</button>
-                </div>
-            </form>
+                <input type="password" id="password" name="password" placeholder="Senha" class="input">
+                
+            </div>
+            <div class="campo">
+                <button id="botaoLogin" type="submit" onClick="login()">Login</button>
+            </div>
         </div>
     </body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        var axiosConfig = {
+            headers: {
+                Authorization: "Bearer " + localStorage.getItem("token")
+            }
+        }
 
+        function login(){
+            //pegando valores para o login
+            var emailField = document.getElementById('email')
+            var passwordField = document.getElementById('password')
+
+            var email = emailField.value
+            var password = passwordField.value
+
+            //Requisição para a rota auth
+            axios.post("http://localhost:3000/auth",{
+              email,
+              password  
+            }).then(res=>{
+                //Salvando o token no local storage do navegador do usuário
+                var token = res.data.token
+                localStorage.setItem('token',token)
+                axiosConfig.headers.Authorization = "Bearer " + localStorage.getItem("token")
+                alert("Login efetuado com sucesso!")
+
+            }).catch(err=>{
+                alert("Login incorreto!")
+            })
+        }
+
+    </script>
 </html>
 

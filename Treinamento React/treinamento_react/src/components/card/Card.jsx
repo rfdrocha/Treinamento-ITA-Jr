@@ -1,7 +1,7 @@
 import React, {useState,useContext} from 'react'
 import './Card.css'
 import DataContext from '../../data/DataContext'
-import DadosLogin,{verificacao} from '../../data/DadosLogin'
+import DadosLogin from '../../data/DadosLogin'
 
 
 const Card = (props) => {
